@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.lliiooll.kinhdown.ui.customs.MultiFloatActionButtonLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                              android:layout_width="match_parent"
+                                                              android:layout_height="match_parent"
+                                                              xmlns:app="http://schemas.android.com/apk/res-auto">
+    <cn.lliiooll.kinhdown.ui.customs.SubFloatLayout android:layout_width="wrap_content"
+                                                    app:tagText="下载"
+                                                    android:background="@drawable/ic_float_button_backgroung"
+                                                    android:layout_height="wrap_content">
+        <cn.lliiooll.kinhdown.ui.customs.DragFloatActionButton android:layout_width="wrap_content"
+                                                               android:src="@drawable/ic_down_cloud_download"
+                                                               android:layout_height="wrap_content">
+        </cn.lliiooll.kinhdown.ui.customs.DragFloatActionButton>
+    </cn.lliiooll.kinhdown.ui.customs.SubFloatLayout>
+
+</cn.lliiooll.kinhdown.ui.customs.MultiFloatActionButtonLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.file.FileFragment">
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/dialog_scroll"
+            android:fastScrollEnabled="true"
+            android:scrollbars="vertical"
+            android:fillViewport="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_gravity="top"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:fadingEdge="none">
+        <ListView
+                android:id="@+id/file_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:footerDividersEnabled="false"
+                android:layout_marginTop="10dp"
+                android:divider="@null"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="top"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+    </ScrollView>
+
+
+    <cn.lliiooll.kinhdown.fab.DragFloatActionMenu
+            android:paddingBottom="60dp"
+            android:id="@+id/fab_menu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_anchorGravity="right|top"
+            app:menu_colorNormal="#FF03DAC5"
+            app:menu_colorPressed="#119386"
+            app:menu_openDirection="up"
+            app:menu_backgroundColor="#ccffffff">
+
+        <cn.lliiooll.kinhdown.fab.DragFloatActionButtonFab
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/fab_download"
+                app:fab_size="mini"
+                app:fab_colorNormal="@color/colorAccent"
+                app:fab_label="下载列表"
+                android:src="@drawable/ic_down_cloud_download"/>
+        <cn.lliiooll.kinhdown.fab.DragFloatActionButtonFab
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/fab_add"
+                app:fab_size="mini"
+                app:fab_colorNormal="@color/colorAccent"
+                app:fab_label="打开分享链接"
+                android:src="@drawable/ic_add"/>
+    </cn.lliiooll.kinhdown.fab.DragFloatActionMenu>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/layout_download"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.appbar.AppBarLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:background="#0060C0"
+            android:theme="@style/AppTheme.AppBarOverlay">
+        <ImageButton
+                android:id="@+id/down_btn_back"
+                android:layout_width="40dp"
+                android:layout_height="48dp"
+                android:background="@drawable/dialog_style_none"
+                android:src="@drawable/ic_baseline_chevron_left_24"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_gravity="left"
+                android:gravity="left"
+        />
+
+        <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:tabIndicatorColor="#CCFFFF"
+        />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager.widget.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+    <cn.lliiooll.kinhdown.fab.DragFloatActionMenu
+            android:paddingBottom="60dp"
+            android:id="@+id/fab_menu_download"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_anchorGravity="right|top"
+            app:menu_colorNormal="#FF03DAC5"
+            app:menu_colorPressed="#119386"
+            app:menu_openDirection="up"
+            app:menu_backgroundColor="#ccffffff">
+
+        <cn.lliiooll.kinhdown.fab.DragFloatActionButtonFab
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/fab_down_del_failed"
+                app:fab_size="mini"
+                app:fab_colorNormal="@color/colorAccent"
+                app:fab_label="删除所有失败任务"
+                android:src="@drawable/ic_del_24"/>
+        <cn.lliiooll.kinhdown.fab.DragFloatActionButtonFab
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/fab_down_restart_failed"
+                app:fab_size="mini"
+                app:fab_colorNormal="@color/colorAccent"
+                app:fab_label="重试所有失败任务"
+                android:src="@drawable/ic_restart_24"/>
+        <cn.lliiooll.kinhdown.fab.DragFloatActionButtonFab
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/fab_down_pause"
+                app:fab_size="mini"
+                app:fab_colorNormal="@color/colorAccent"
+                app:fab_label="暂停所有下载中任务"
+                android:src="@drawable/ic_pause_24"/>
+        <cn.lliiooll.kinhdown.fab.DragFloatActionButtonFab
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/fab_down_continue"
+                app:fab_size="mini"
+                app:fab_colorNormal="@color/colorAccent"
+                app:fab_label="继续所有下载中任务"
+                android:src="@drawable/ic_continue_24"/>
+
+    </cn.lliiooll.kinhdown.fab.DragFloatActionMenu>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

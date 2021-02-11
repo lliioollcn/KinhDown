@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/mobile_navigation"
+            app:startDestination="@+id/navigation_file">
+
+    <fragment
+            android:id="@+id/navigation_file"
+            android:name="cn.lliiooll.kinhdown.ui.file.FileFragment"
+            android:label="@string/title_file"
+            tools:layout="@layout/fragment_file"/>
+<!--
+    <fragment
+            android:id="@+id/navigation_download"
+            android:name="cn.lliiooll.kinhdown.ui.download.DownloadFragment"
+            android:label="@string/title_download"
+            tools:layout="@layout/activity_download"/>
+            -->
+
+    <fragment
+            android:id="@+id/navigation_account"
+            android:name="cn.lliiooll.kinhdown.ui.account.AccountFragment"
+            android:label="@string/title_account"
+            tools:layout="@layout/fragment_notifications"/>
+</navigation>
